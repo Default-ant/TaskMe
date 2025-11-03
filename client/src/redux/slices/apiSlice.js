@@ -10,7 +10,7 @@ const baseQuery = fetchBaseQuery({
   prepareHeaders: (headers, { getState }) => {
     // Get the token from your Redux state
     // Adjust 'auth.token' to match your auth slice
-    const token = getState()?.auth?.token 
+    const token = getState()?.auth?.user?.token 
 
     if (token) {
       headers.set('authorization', `Bearer ${token}`)
